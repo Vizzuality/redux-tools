@@ -1,3 +1,5 @@
+// import 'babel-plugin-external-helpers';
+
 import createAction from './createAction';
 import createThunkAction from './createThunkAction';
 import handleActions from './handleActions';

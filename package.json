@@ -1,46 +1,28 @@
 {
   "name": "redux-tools",
-  "version": "3.2.0",
-  "description": "Flux Standard Action utlities for Redux",
-  "main": "lib/index.js",
+  "version": "1.0.0",
+  "main": "lib/index.cjs.js",
+  "module": "lib/index.esm.js",
+  "browser": "lib/index.js",
+  "dependencies": {
+    "ms": "^2.0.0",
+    "reduce-reducers": "^0.1.2",
+    "uuid": "^3.2.1"
+  },
+  "devDependencies": {
+    "babel-preset-env": "^1.6.0",
+    "rollup": "^0.46.0",
+    "rollup-plugin-babel": "^2.7.1",
+    "rollup-plugin-commonjs": "^8.0.2",
+    "rollup-plugin-node-resolve": "^3.0.0"
+  },
   "scripts": {
-    "dev": "nodemon --watch lib* ./node_modules/.bin/rollup -c",
-    "build": "rollup --config ./rollup.config.js",
-    "clean": "rm -rf ./lib",
-    "test": "mocha --compilers js:babel-register src/**/*-test.js",
-    "test:watch": "npm run test -- --watch src/**/*-test.js"
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "test": "node test/test.js",
+    "pretest": "npm run build"
   },
   "files": [
     "lib"
-  ],
-  "keywords": [
-    "flux",
-    "redux",
-    "fsa",
-    "actions"
-  ],
-  "license": "MIT",
-  "dependencies": {
-    "babel-core": "^6.7.7",
-    "babel-eslint": "^6.1.1",
-    "babel-loader": "^6.2.4",
-    "babel-plugin-transform-runtime": "^6.23.0",
-    "babel-preset-es2015-rollup": "^3.0.0",
-    "babel-preset-stage-0": "^6.5.0",
-    "babel-register": "^6.7.2",
-    "chai": "^3.0.0",
-    "cross-env": "^2.0.0",
-    "eslint": "^2.8.0",
-    "eslint-config-airbnb-base": "^1.0.3",
-    "eslint-plugin-import": "^1.5.0",
-    "eslint-watch": "^2.1.13",
-    "invariant": "^2.2.1",
-    "lodash": "^4.13.1",
-    "mocha": "^2.2.5",
-    "reduce-reducers": "^0.1.0",
-    "rollup": "^0.50.1",
-    "rollup-plugin-babel": "^3.0.2",
-    "rollup-plugin-node-resolve": "^3.0.0",
-    "rollup-plugin-uglify": "^2.0.1"
-  }
+  ]
 }
