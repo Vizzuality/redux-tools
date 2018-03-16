@@ -1,6 +1,6 @@
 {
   "name": "redux-tools",
-  "version": "1.0.0",
+  "version": "3.2.0",
   "main": "lib/index.cjs.js",
   "module": "lib/index.esm.js",
   "browser": "lib/index.js",
