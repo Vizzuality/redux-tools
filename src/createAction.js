@@ -2,6 +2,7 @@ import identity from 'lodash/identity';
 import isFunction from 'lodash/isFunction';
 import isNull from 'lodash/isNull';
 import invariant from 'invariant';
+
 const uuidv1 = require('uuid/v1');
 
 export default function createAction(name, payloadCreator = identity, metaCreator) {
