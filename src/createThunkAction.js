@@ -1,13 +1,7 @@
-import createAction from './createAction';
+import { createActionThunk } from 'redux-thunk-actions';
 
-export default (name, thunkAction, metaCreator) => {
-  const action = createAction(name, null, metaCreator);
-  if (!thunkAction) return action;
-  const returnAction = payload => (dispatch, getState) => {
-    dispatch(action(payload));
+export default (name, thunkAction, metaCreator) =>
+  createActionThunk(name, (payload, store) => {
+    const { getState, dispatch } = store;
     return thunkAction(payload)(dispatch, getState);
-  };
-
-  returnAction.toString = action.toString;
-  return returnAction;
-};
+  }, metaCreator);

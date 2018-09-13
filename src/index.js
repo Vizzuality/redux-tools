@@ -1,13 +1,23 @@
-// import 'babel-plugin-external-helpers';
-
-import createAction from './createAction';
-import createThunkAction from './createThunkAction';
-import handleActions from './handleActions';
+import {
+  combineActions,
+  createAction,
+  createActions,
+  createCurriedAction,
+  handleAction,
+  handleActions
+} from 'redux-actions';
+import { createActionThunk } from 'redux-thunk-actions';
 import handleModule from './handleModule';
+import createThunkAction from './createThunkAction';
 
 export {
+  combineActions,
   createAction,
+  createActions,
+  createCurriedAction,
+  handleAction,
   handleActions,
-  createThunkAction,
-  handleModule
+  handleModule,
+  createActionThunk,
+  createThunkAction // Fallback support for old namespaces
 };

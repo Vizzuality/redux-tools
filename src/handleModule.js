@@ -1,4 +1,4 @@
-import handleActions from './handleActions';
+import { handleActions } from 'redux-actions';
 
 export default function handleModule(moduleFile) {
   const { reducers, initialState } = moduleFile;
@@ -11,5 +11,5 @@ export default function handleModule(moduleFile) {
   if (missingPart) {
     console.warn(`You are attempting to connect a module that doesn't export any ${missingPart}.`);
   }
-  return handleActions(reducers, initialState || {});
+  return handleActions(reducers.default || reducers, initialState || {});
 }

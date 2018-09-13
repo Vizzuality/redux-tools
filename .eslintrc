@@ -1,7 +1,6 @@
 {
   "extends": "vizzuality",
   "env": {
-    "mocha": true,
     "node": true
   }
 }
