@@ -6,6 +6,7 @@ import {
   handleAction,
   handleActions
 } from 'redux-actions';
+// import { createActionThunk } from 'redux-thunk-actions';
 import handleModule from './handleModule';
 import createActionThunk from './createActionThunk';
 import createThunkAction from './createThunkAction';
