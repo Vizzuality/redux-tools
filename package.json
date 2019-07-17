@@ -1,6 +1,6 @@
 {
   "name": "vizzuality-redux-tools",
-  "version": "4.0.2",
+  "version": "4.1.0",
   "description": "The purpose of any library is to make something more complicated seem simple through abstraction.",
   "main": "lib/index.cjs.js",
   "module": "lib/index.esm.js",
